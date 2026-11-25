@@ -2,12 +2,12 @@
 
 Contexto para continuar o projeto com um agente de IA. Leia tudo antes de responder ou de mexer em qualquer arquivo.
 
-Última atualização: 25/11/2026. Apresentação em **03/12/2026** (faltam poucos dias; priorize o que vale nota).
+Última atualização: 25/11/2026. Apresentação em **03/12/2026** (faltam poucos dias; priorize o que vale nota). Repositório e Kanban criados nesta data — ver seção "Estado atual".
 
 ## Como trabalhar neste projeto
 
 - Responda em **português (PT-BR)**. Comentários de código, mensagens de commit e textos do app também em PT-BR.
-- **Fase atual:** o desenho está fechado para a E1 e a implementação está começando. **Só gere ou altere código para a tarefa (card do Kanban) que o usuário indicar.** Não adiante etapas, não refatore o que não foi pedido, não crie arquivos fora do escopo do card.
+- **Fase atual:** repositório e Kanban prontos (25/11/2026), o desenho está fechado para a E1 e **o código ainda não começou**. **Só gere ou altere código para a tarefa (card do Kanban) que o usuário indicar.** Não adiante etapas, não refatore o que não foi pedido, não crie arquivos fora do escopo do card.
 - Separe sempre o que o grupo **já decidiu** do que é **proposta**. Não trate proposta como decisão.
 - Antes de afirmar qualquer detalhe da PokéAPI, lembre que os campos citados abaixo vêm de conhecimento geral e **precisam ser confirmados no Postman** (a E1 exige isso de qualquer forma). Se o usuário colar uma resposta real da API, ela vale mais que este arquivo.
 - Faça uma pergunta de cada vez quando precisar de uma decisão.
@@ -23,6 +23,35 @@ Contexto para continuar o projeto com um agente de IA. Leia tudo antes de respon
 - Não crie nem edite o documento do grupo no Google Docs por conta própria; o histórico do Docs entra no fator individual e o documento **não pode ser recriado ou copiado**. Pode ajudar com rascunhos de texto para o usuário colar.
 - Dado de teste: não cole dados pessoais nem tokens em código ou commits.
 
+## Estado atual (25/11/2026)
+
+**Feito**
+- Repositório **público**: https://github.com/TallesDiniz/pokedex-de-estudo (conta do Talles, sem organização). Branch `main`, commit inicial com `README.md`, `.gitignore` e este `CLAUDE.md`.
+- Convites de colaborador (permissão de escrita) enviados para `Pgustavols` e `docarmojoao4` — **aceitação pendente** dos dois.
+- Kanban: https://github.com/TallesDiniz/pokedex-de-estudo/projects/2 — projeto vinculado ao repositório, colunas **A fazer / Fazendo / Feito**, com as 30 Issues (#1 a #30) na coluna "A fazer".
+- Ambiente do Talles (computador do trabalho): `gh` (GitHub CLI) instalado em modo portátil em `%LOCALAPPDATA%\Programs\gh\bin` (sem admin) e no PATH do usuário; token com escopos `repo`, `project`, `workflow`, `gist`, `read:org`. Identidade git configurada **apenas neste repositório** (`Talles Diniz` / `tallessdiniz@gmail.com`).
+
+**Ainda não existe código**: não há `package.json`, Vite, `src/`, rotas nem Capacitor. Isso são os cards #4, #5 e #6.
+
+**Mapa das Issues** (a Issue é o card do plano; a numeração não bate com o número do card)
+- E1: **#1 = 1.1**, #2 = 1.2, #3 = 1.3, #4 = 1.4, #5 = 1.5, #6 = 1.6, #7 = 1.7, #8 = 1.8, #9 = 1.9, #10 = 1.10, #11 = 1.11
+- E2: **#12 = 2.1**, #13 = 2.2, #14 = 2.3, #15 = 2.4, #16 = 2.5, #17 = 2.6, #18 = 2.7, #19 = 2.8, #20 = 2.9, #21 = 2.10, #22 = 2.11
+- E3: **#23 = 3.1**, #24 = 3.2, #25 = 3.3, #26 = 3.4, #27 = 3.5, #28 = 3.6, #29 = 3.7, #30 = 3.8
+
+Convenção de commit: citar a Issue, ex.: `rotas e navbar (#6)`.
+
+**Pendências imediatas**
+1. Trocar a view do Project para **Board** (a API do GitHub não cria view de quadro): no projeto, `View 1` → `···` → Layout → Board.
+2. Mover **#1** e **#2** para "Feito" (quem fez move o próprio card).
+3. Definir as frentes A e B (card #3) — bloqueia o início da frente B.
+4. Conferir no PDF do enunciado as datas de E1, E2 e E3.
+5. Confirmar como o professor recebe o link — o repositório público dispensa convite.
+
+**Continuar em outro computador**
+- `git clone https://github.com/TallesDiniz/pokedex-de-estudo`
+- Cada integrante configura a **própria** identidade (`git config user.name` / `user.email`) na própria conta; não reaproveitar a configuração local deste repositório.
+- Para usar o Kanban pelo terminal: instalar o `gh` e rodar `gh auth login` (escopo `project` é necessário para mexer no Project).
+
 ## Equipe e organização
 
 - Grupo de **3 pessoas**:
@@ -34,8 +63,8 @@ Contexto para continuar o projeto com um agente de IA. Leia tudo antes de respon
   - **B. Telas e CSS:** `paginas/` (Início, Resultados, Detalhe), `tokens.css`, `base.css`, helper de estados.
   - **C. Base e nativo:** esqueleto, `main.js`, `rotas.js`, `navbar.js`, Favoritos com Preferences, Capacitor, APK, telas Favoritos, Sobre e 404.
 - A frente B depende dos dados da A: combinar cedo o contrato do modelo convertido (seção "Modelo de dados convertido") para trabalharem em paralelo.
-- **Repositório:** não há organização do GitHub; o Talles está criando na conta dele (nome sugerido: `pokedex-de-estudo`, **proposta**) e convidando os outros dois como colaboradores. Conferir no enunciado como o professor recebe o link e se precisa de acesso. Ainda não confirmado que o repositório existe.
-- **Kanban:** GitHub Projects (colunas A fazer, Fazendo, Feito), com uma Issue por tarefa do plano (numeração 1.1 a 3.8 no documento "Plano e acompanhamento"). Cada card tem um responsável e **quem faz move o próprio card**.
+- **Repositório:** não há organização do GitHub; foi criado na conta do Talles em **https://github.com/TallesDiniz/pokedex-de-estudo** (público, 25/11/2026) com os outros dois convidados como colaboradores (aceitação pendente). Falta confirmar no enunciado como o professor recebe o link — sendo público, não precisa de convite.
+- **Kanban:** GitHub Projects em **https://github.com/TallesDiniz/pokedex-de-estudo/projects/2**, vinculado ao repositório, colunas A fazer, Fazendo, Feito, com uma Issue por tarefa do plano (30 Issues; mapa na seção "Estado atual"). Cada card tem um responsável e **quem faz move o próprio card**.
 - **Plano de tarefas e acompanhamento:** documento "Pokédex de estudo — Plano e acompanhamento", no Claude Docs do Talles, com situação geral, tarefas por etapa, checklist final e registro de andamento.
 - Convenção de commits (proposta): mensagens curtas em PT-BR citando o card, ex.: `rotas e navbar (#6)`. Cada integrante deve commitar em pelo menos 2 dias diferentes.
 
@@ -79,12 +108,12 @@ Contexto para continuar o projeto com um agente de IA. Leia tudo antes de respon
 
 ## Ordem de trabalho combinada (próximos passos)
 
-1. Criar repositório e Kanban (Talles). **Em andamento.**
-2. Atribuir as frentes A e B ao Paulo e ao João Pedro.
+1. ~~Criar repositório e Kanban~~ — **feito em 25/11/2026** (ver "Estado atual").
+2. Atribuir as frentes A e B ao Paulo e ao João Pedro (card #3). **Pendente e bloqueia a frente B.**
 3. Conferir no enunciado as datas de E1, E2 e E3.
-4. **Esqueleto rodando** (frente C): base do KiOferta com `servicos/` no lugar de `dadosMockados/`, Vite, rotas e menu, validado com `npm install` e `npm run dev` em pasta limpa.
-5. **Postman** (todos): testar os endpoints listados abaixo e guardar os prints para o documento.
-6. **APK de debug vazio** (frente C): descobrir cedo se Android Studio e JDK funcionam.
+4. **Esqueleto rodando** (frente C, cards #4 e #5): base do KiOferta com `servicos/` no lugar de `dadosMockados/`, Vite, rotas e menu (#6), validado com `npm install` e `npm run dev` em pasta limpa.
+5. **Postman** (todos, card #7): testar os endpoints listados abaixo e guardar os prints para o documento.
+6. **APK de debug vazio** (frente C, card #11): descobrir cedo se Android Studio e JDK funcionam.
 
 ## Desenho proposto (ponto de partida; rever livremente)
 
