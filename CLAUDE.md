@@ -40,12 +40,15 @@ Contexto para continuar o projeto com um agente de IA. Leia tudo antes de respon
 
 Convenção de commit: citar a Issue, ex.: `rotas e navbar (#6)`.
 
+**Resolvido em 25/11/2026 (noite)**
+- Cards **#1** e **#2** movidos para "Feito" pelo Talles.
+- Frentes definidas: **A (Dados) = Paulo**, **B (Telas e CSS) = João Pedro** (card #3).
+- Datas: **E1, E2 e E3 vencem todas em 03/12/2026**, junto com a entrega e a apresentação.
+
 **Pendências imediatas**
-1. Trocar a view do Project para **Board** (a API do GitHub não cria view de quadro): no projeto, `View 1` → `···` → Layout → Board.
-2. Mover **#1** e **#2** para "Feito" (quem fez move o próprio card).
-3. Definir as frentes A e B (card #3) — bloqueia o início da frente B.
-4. Conferir no PDF do enunciado as datas de E1, E2 e E3.
-5. Confirmar como o professor recebe o link — o repositório público dispensa convite.
+1. Trocar a view do Project para **Board** (a API do GitHub não cria view de quadro; feito manualmente pela interface): no projeto, `View 1` → `···` → Layout → Board.
+2. Mover o card **#3** para "Feito" e atribuir os cards de cada frente ao responsável.
+3. Confirmar como o professor recebe o link — o repositório público dispensa convite.
 
 **Continuar em outro computador**
 - `git clone https://github.com/TallesDiniz/pokedex-de-estudo`
@@ -56,9 +59,9 @@ Convenção de commit: citar a Issue, ex.: `rotas e navbar (#6)`.
 
 - Grupo de **3 pessoas**:
   - **Talles Diniz** — GitHub `TallesDiniz` — **frente C (Base e nativo)** (decidido)
-  - **Paulo Gustavo Lisboa** — GitHub `Pgustavols` — frente a definir
-  - **João Pedro do Carmo** — GitHub `docarmojoao4` — frente a definir
-- **Divisão em três frentes (decidida pelo grupo; atribuição de A e B ainda pendente):**
+  - **Paulo Gustavo Lisboa** — GitHub `Pgustavols` — **frente A (Dados)** (decidido)
+  - **João Pedro do Carmo** — GitHub `docarmojoao4` — **frente B (Telas e CSS)** (decidido)
+- **Divisão em três frentes (decidida pelo grupo):**
   - **A. Dados:** `servicos/api.js`, conversão, `servicos/cache.js`, `servicos/efetividade.js`.
   - **B. Telas e CSS:** `paginas/` (Início, Resultados, Detalhe), `tokens.css`, `base.css`, helper de estados.
   - **C. Base e nativo:** esqueleto, `main.js`, `rotas.js`, `navbar.js`, Favoritos com Preferences, Capacitor, APK, telas Favoritos, Sobre e 404.
@@ -72,7 +75,7 @@ Convenção de commit: citar a Issue, ex.: `rotas e navbar (#6)`.
 
 - FATEC Mogi das Cruzes · Análise e Desenvolvimento de Sistemas · Programação para Dispositivos Móveis · Prof. Rodrigo dos Santos Faustino.
 - Grupos de 3 a 4 pessoas. Um repositório por grupo na organização do GitHub, com Kanban.
-- Etapas: **E1** (esqueleto, docs com capa e identificação, pergunta do app, esqueleto rodando com rotas e menu, API testada no Postman com print no Docs), **E2** (busca, resultados e detalhe vindos da API, com estados carregando, erro e vazio), **E3** (cache, recurso nativo, favoritos e documento completo). As datas de E1 a E3 não apareceram no texto extraído do PDF: conferir no enunciado. **Apresentação: 03/12**, 10 minutos, app rodando a 360 px, uma pergunta para cada integrante.
+- Etapas: **E1** (esqueleto, docs com capa e identificação, pergunta do app, esqueleto rodando com rotas e menu, API testada no Postman com print no Docs), **E2** (busca, resultados e detalhe vindos da API, com estados carregando, erro e vazio), **E3** (cache, recurso nativo, favoritos e documento completo). **E1, E2 e E3 têm a mesma data da entrega e da apresentação: 03/12/2026** (confirmado pelo grupo). **Apresentação: 03/12**, 10 minutos, app rodando a 360 px, uma pergunta para cada integrante.
 - Nota: app 50 pts, documento 30 pts, apresentação 20 pts. A nota do grupo é multiplicada por um fator individual (histórico do Google Docs, commits em pelo menos 2 dias diferentes, cards concluídos no Kanban).
 - Esqueleto base: o do KiOferta (Desafio 1), trocando `dadosMockados/` por `servicos/`.
 
@@ -103,14 +106,15 @@ Convenção de commit: citar a Issue, ex.: `rotas e navbar (#6)`.
 - **Rotas definidas:** `#/` (Início), `#/resultados/pokemon/{nome}` (Resultados), `#/detalhe/{id}` (Detalhe), `#/favoritos` (Favoritos), `#/sobre` (Sobre) e fallback 404 com saída para o início.
 - Vão gerar um **APK**.
 - **Política de cache:** cache primeiro, com validade, para `pokemon`, `tipo`, `especie` e `nomes`; rede primeiro para a lista de resultados.
-- **Divisão em três frentes (A Dados, B Telas e CSS, C Base e nativo)** e **Talles na frente C**. Quem fica com A e com B ainda não foi definido.
+- **Divisão em três frentes:** **A Dados = Paulo**, **B Telas e CSS = João Pedro**, **C Base e nativo = Talles**.
+- **Prazo único:** E1, E2 e E3 vencem em 03/12/2026, mesma data da entrega e da apresentação.
 - Grupo: Talles Diniz, Paulo Gustavo Lisboa e João Pedro do Carmo.
 
 ## Ordem de trabalho combinada (próximos passos)
 
 1. ~~Criar repositório e Kanban~~ — **feito em 25/11/2026** (ver "Estado atual").
-2. Atribuir as frentes A e B ao Paulo e ao João Pedro (card #3). **Pendente e bloqueia a frente B.**
-3. Conferir no enunciado as datas de E1, E2 e E3.
+2. ~~Atribuir as frentes A e B~~ — **feito**: A = Paulo, B = João Pedro (card #3).
+3. ~~Conferir as datas de E1, E2 e E3~~ — **todas em 03/12/2026**.
 4. **Esqueleto rodando** (frente C, cards #4 e #5): base do KiOferta com `servicos/` no lugar de `dadosMockados/`, Vite, rotas e menu (#6), validado com `npm install` e `npm run dev` em pasta limpa.
 5. **Postman** (todos, card #7): testar os endpoints listados abaixo e guardar os prints para o documento.
 6. **APK de debug vazio** (frente C, card #11): descobrir cedo se Android Studio e JDK funcionam.
@@ -184,8 +188,7 @@ Vite como `npm run dev` (para cumprir a penalidade de rodar em pasta limpa). Cap
 `/type` (lista dos 18 tipos), `/type/water` (`damage_relations` com `double_damage_from`, `half_damage_from`, `no_damage_from` e `pokemon` com nome e URL), `/pokemon/gyarados` (tipos, stats, sprites, `is_default`, `species`), `/pokemon-species/{id}` (`is_legendary`, `is_mythical`, `generation`), `/pokemon?limit=1400`. Verificar se formas alternativas aparecem em `/type/{tipo}` com ids acima de 10000. O GraphQL beta da PokéAPI poderia reduzir o número de chamadas, mas é beta e não foi verificado; só usar se o Postman confirmar e o grupo aceitar.
 
 ## Pontos em aberto
-- **Atribuição das frentes A e B** entre Paulo e João Pedro.
-- **Datas de E1, E2 e E3** (conferir no enunciado) e **como o professor recebe o link do repositório** (não há organização do GitHub).
+- **Como o professor recebe o link do repositório** (não há organização do GitHub).
 - **Layout e tokens** a 360 px (cores, tipografia, cards, chips de tipo, filtros em Flexbox com `flex-wrap`).
 - **Menu gerado da lista de rotas** (confirmar se apenas `Início`, `Favoritos` e `Sobre` aparecem na barra de navegação).
 - **Testes de falha** (como provocar e registrar os quatro estados e a falha de gravação do Preferences).
