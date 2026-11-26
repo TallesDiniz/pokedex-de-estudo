@@ -4,7 +4,9 @@ function navbar(itensMenu) {
   const navbarElement = document.getElementById('navbar')
 
   function render() {
-    const hashAtual = window.location.hash || itensMenu[0]?.url
+    // Sem hash (ou só '#') conta como Início
+    let hashAtual = window.location.hash
+    if (hashAtual === '' || hashAtual === '#') hashAtual = '#/'
 
     navbarElement.innerHTML = `
       <nav class="navbar">
