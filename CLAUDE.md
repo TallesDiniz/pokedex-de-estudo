@@ -2,12 +2,12 @@
 
 Contexto para continuar o projeto com um agente de IA. Leia tudo antes de responder ou de mexer em qualquer arquivo.
 
-Última atualização: 25/11/2026. Apresentação em **03/12/2026** (faltam poucos dias; priorize o que vale nota). Repositório e Kanban criados nesta data — ver seção "Estado atual".
+Última atualização: 26/11/2026. Apresentação em **03/12/2026** (faltam poucos dias; priorize o que vale nota). Repositório, Kanban, esqueleto com rotas e protótipo interativo no Figma prontos — ver seção "Estado atual".
 
 ## Como trabalhar neste projeto
 
 - Responda em **português (PT-BR)**. Comentários de código, mensagens de commit e textos do app também em PT-BR.
-- **Fase atual:** repositório e Kanban prontos (25/11/2026), o desenho está fechado para a E1 e **o código ainda não começou**. **Só gere ou altere código para a tarefa (card do Kanban) que o usuário indicar.** Não adiante etapas, não refatore o que não foi pedido, não crie arquivos fora do escopo do card.
+- **Fase atual:** repositório, Kanban, esqueleto com Vite/rotas/menu (`#4`, `#5`, `#6`) e protótipo interativo no Figma prontos (26/11/2026). **Só gere ou altere código para a tarefa (card do Kanban) que o usuário indicar.** Não adiante etapas, não refatore o que não foi pedido, não crie arquivos fora do escopo do card.
 - Separe sempre o que o grupo **já decidiu** do que é **proposta**. Não trate proposta como decisão.
 - Antes de afirmar qualquer detalhe da PokéAPI, lembre que os campos citados abaixo vêm de conhecimento geral e **precisam ser confirmados no Postman** (a E1 exige isso de qualquer forma). Se o usuário colar uma resposta real da API, ela vale mais que este arquivo.
 - Faça uma pergunta de cada vez quando precisar de uma decisão.
@@ -31,9 +31,14 @@ Contexto para continuar o projeto com um agente de IA. Leia tudo antes de respon
 - Kanban: https://github.com/TallesDiniz/pokedex-de-estudo/projects/2 — projeto vinculado ao repositório, colunas **A fazer / Fazendo / Feito**, com as 30 Issues (#1 a #30) na coluna "A fazer".
 - Ambiente do Talles (computador do trabalho): `gh` (GitHub CLI) instalado em modo portátil em `%LOCALAPPDATA%\Programs\gh\bin` (sem admin) e no PATH do usuário; token com escopos `repo`, `project`, `workflow`, `gist`, `read:org`. Identidade git configurada **apenas neste repositório** (`Talles Diniz` / `tallessdiniz@gmail.com`).
 
-**Esqueleto (cards #4 e #5, 25/11/2026, ainda sem commit):** `package.json` só com `vite` (^7.3.1) em devDependencies, `vite.config.js` (root `src/`, build em `dist/`, sem Tailwind), `src/index.html`, `css/style.css`, `js/main.js`, `rotas/rotas.js`, `navbar/navbar.js`, `paginas/{inicio,favoritos,sobre}/` provisórias e `servicos/` vazia (`.gitkeep`; os arquivos são da frente A). Validado com `npm install`, `npm run dev` e `npm run build` em pasta limpa. Capacitor ainda não foi instalado (entra no card do APK).
+**Esqueleto (cards #4 e #5, commitados na `main`):** `package.json` só com `vite` (^7.3.1) em devDependencies, `vite.config.js` (root `src/`, build em `dist/`, sem Tailwind), `src/index.html`, `css/style.css`, `js/main.js`, `rotas/rotas.js`, `navbar/navbar.js`, `paginas/{inicio,favoritos,sobre}/` provisórias e `servicos/` vazia (`.gitkeep`; os arquivos são da frente A). Validado com `npm install`, `npm run dev` e `npm run build` em pasta limpa. Capacitor ainda não foi instalado (entra no card do APK).
 
-**Rotas (card #6):** `main.js` compara o hash com o modelo de cada rota pedaço por pedaço (`combinarRota`); pedaços com `:` viram parâmetros, passados para a tela como `pagina(app, parametros)` (ex. `parametros.nome`, `parametros.id`). Rota com `label: ''` não aparece no menu. Nenhuma rota combinou → `paginas/nao-encontrada/` (404, fora da lista). Resultados e Detalhe são provisórias para a frente B substituir; ao mostrar texto vindo do endereço, usar `textContent`, não `innerHTML`.
+**Rotas (card #6, commitado na `main`):** `main.js` compara o hash com o modelo de cada rota pedaço por pedaço (`combinarRota`); pedaços com `:` viram parâmetros, passados para a tela como `pagina(app, parametros)` (ex. `parametros.nome`, `parametros.id`). Rota com `label: ''` não aparece no menu. Nenhuma rota combinou → `paginas/nao-encontrada/` (404, fora da lista). Resultados e Detalhe são provisórias para a frente B substituir; ao mostrar texto vindo do endereço, usar `textContent`, não `innerHTML`.
+
+**Layout e Protótipo no Figma (26/11/2026):** guia visual e tokens em `docs/layout/guia-de-layout.md` (+ 5 imagens de referência) e protótipo interativo no Figma:
+- Edição: https://www.figma.com/design/44MvU7mjgwUiLh0occiBC3
+- Modo Protótipo (clicável): https://www.figma.com/proto/44MvU7mjgwUiLh0occiBC3?node-id=5-2
+- Contém coleção `Tokens (tokens.css)` (43 variáveis com sintaxe CSS `var(--...)`), estilos de tipografia/sombra, `Component Sets` (`ChipTipo` com 18 tipos em PT-BR, `Botao`, `ChipFiltro`, `NavbarInferior`) e as 6 telas mobile a `360px` com 33 interações e 2 fluxos (*Fluxo Principal* e *Estados*).
 - No Windows deste computador, o PowerShell bloqueia `npm.ps1` (política de execução): usar `npm.cmd run dev` ou rodar no Prompt de Comando/Git Bash.
 
 **Mapa das Issues** (a Issue é o card do plano; a numeração não bate com o número do card)
@@ -192,7 +197,7 @@ Vite como `npm run dev` (para cumprir a penalidade de rodar em pasta limpa). Cap
 
 ## Pontos em aberto
 - **Como o professor recebe o link do repositório** (não há organização do GitHub).
-- **Layout e tokens** a 360 px (cores, tipografia, cards, chips de tipo, filtros em Flexbox com `flex-wrap`).
+- **Layout e tokens** a 360 px — proposta fechada em `docs/layout/guia-de-layout.md` e protótipo interativo no Figma (aguardando implementação em CSS pela frente B).
 - **Menu gerado da lista de rotas** (confirmar se apenas `Início`, `Favoritos` e `Sobre` aparecem na barra de navegação).
 - **Testes de falha** (como provocar e registrar os quatro estados e a falha de gravação do Preferences).
 - **Divisão dos blocos da apresentação** entre os três.
