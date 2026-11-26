@@ -3,6 +3,8 @@
 Proposta visual para o app no estilo **claro com toque de Pokédex** (escolhido em 25/11/2026).  
 Serve de referência para a **frente B** (`tokens.css`, `base.css`, Início, Resultados e Detalhe) e para a **frente C** (`navbar.js`, Favoritos, Sobre e 404).
 
+**Protótipo no Figma:** [Pokédex de estudo — Layout e Telas](https://www.figma.com/design/44MvU7mjgwUiLh0occiBC3)
+
 > **Regras do enunciado que este guia respeita (L1–L4):**
 > - Tudo em **Flexbox** (**proibido `display: grid`**).
 > - Nenhum filho flex com largura ou altura fixa (usar `flex`, `min-width`, `max-width`, `flex-wrap`).

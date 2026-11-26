@@ -43,6 +43,11 @@ npm install
 npm run dev
 ```
 
+## Layout
+
+- Protótipo no Figma: [Pokédex de estudo — Layout e Telas](https://www.figma.com/design/44MvU7mjgwUiLh0occiBC3)
+- Guia de layout e tokens: [`docs/layout/guia-de-layout.md`](./docs/layout/guia-de-layout.md)
+
 ## Acompanhamento
 
 As tarefas ficam no Kanban (GitHub Projects) deste repositório, uma Issue por tarefa.
