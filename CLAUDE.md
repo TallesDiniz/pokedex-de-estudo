@@ -31,7 +31,8 @@ Contexto para continuar o projeto com um agente de IA. Leia tudo antes de respon
 - Kanban: https://github.com/TallesDiniz/pokedex-de-estudo/projects/2 — projeto vinculado ao repositório, colunas **A fazer / Fazendo / Feito**, com as 30 Issues (#1 a #30) na coluna "A fazer".
 - Ambiente do Talles (computador do trabalho): `gh` (GitHub CLI) instalado em modo portátil em `%LOCALAPPDATA%\Programs\gh\bin` (sem admin) e no PATH do usuário; token com escopos `repo`, `project`, `workflow`, `gist`, `read:org`. Identidade git configurada **apenas neste repositório** (`Talles Diniz` / `tallessdiniz@gmail.com`).
 
-**Ainda não existe código**: não há `package.json`, Vite, `src/`, rotas nem Capacitor. Isso são os cards #4, #5 e #6.
+**Esqueleto (cards #4 e #5, 25/11/2026, ainda sem commit):** `package.json` só com `vite` (^7.3.1) em devDependencies, `vite.config.js` (root `src/`, build em `dist/`, sem Tailwind), `src/index.html`, `css/style.css`, `js/main.js`, `rotas/rotas.js`, `navbar/navbar.js`, `paginas/{inicio,favoritos,sobre}/` provisórias e `servicos/` vazia (`.gitkeep`; os arquivos são da frente A). Validado com `npm install`, `npm run dev` e `npm run build` em pasta limpa. Capacitor ainda não foi instalado (entra no card do APK). Rotas com parâmetro, Resultados, Detalhe e 404 ficam para o card #6.
+- No Windows deste computador, o PowerShell bloqueia `npm.ps1` (política de execução): usar `npm.cmd run dev` ou rodar no Prompt de Comando/Git Bash.
 
 **Mapa das Issues** (a Issue é o card do plano; a numeração não bate com o número do card)
 - E1: **#1 = 1.1**, #2 = 1.2, #3 = 1.3, #4 = 1.4, #5 = 1.5, #6 = 1.6, #7 = 1.7, #8 = 1.8, #9 = 1.9, #10 = 1.10, #11 = 1.11
